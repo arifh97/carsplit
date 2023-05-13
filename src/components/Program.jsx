@@ -4,9 +4,9 @@ import img from '../assets/img/program-img.png'
 
 export default function Program(){
     return(
-        <div className='program'>
+        <div className='program pt-180'>
             <Container>
-                <Row className='justify-content-between'>
+                <Row className='justify-content-center'>
                     <Col lg={8}>
                         <div className="section-title text-center">
                             <h2>Ambassador Program</h2>
@@ -43,7 +43,7 @@ export default function Program(){
                             <img src={img} alt="" />
                         </div>
                     </Col>
-                    <Col sm={12} className='text-center'>
+                    <Col sm={12} className='text-center pt-30'>
                         <a href="/#" className="site-btn">Become an Ambassador</a>
                     </Col>
                 </Row>

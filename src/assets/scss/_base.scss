@@ -90,6 +90,18 @@ input[type=number] {
             padding-top: 50px;
         }
     }
+    &-140 {
+        padding-top: 140px;
+        @include lg {
+            padding-top: 110px;
+        }
+        @include md {
+            padding-top: 80px;
+        }
+        @include sm {
+            padding-top: 60px;
+        }
+    }
     &-180 {
         padding-top: 180px;
         @include lg {
@@ -101,6 +113,9 @@ input[type=number] {
         @include sm {
             padding-top: 80px;
         }
+    }
+    &-30 {
+        padding-top: 30px;
     }
 }
 
@@ -144,5 +159,31 @@ input[type=number] {
                 }
             }
         }
+    }
+}
+
+.container {
+    @media (min-width: 1400px) {
+        max-width: 1140px;
+    }
+}
+
+.section-title {
+    margin-bottom: 80px;
+    @include md {
+        margin-top: 60px;
+    }
+    @include sm {
+        margin-top: 40px;
+    }
+    & h2 {
+        @include font-48;
+        margin-bottom: 30px;
+        @include sm {
+            margin-top: 24px;
+        }
+    }
+    & p {
+        font-size: 18px;
     }
 }

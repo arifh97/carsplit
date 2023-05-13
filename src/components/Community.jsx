@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 export default function Community(){
     return(
-        <div className="community">
+        <div className="community pt-140">
             <Container>
                 <Row className="justify-content-center">
                     <Col lg={8}>

@@ -6,7 +6,7 @@ export default function Invest(){
     return(
         <div className='invest pt-180'>
             <Container>
-                <Row>
+                <Row className='align-items-center'>
                     <Col md={6}>
                         <div className="invest-img">
                             <img src={img} alt="" />

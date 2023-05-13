@@ -78,11 +78,43 @@
 /* about stat */
 
 .about {
+    position: relative;
+    z-index: 1;
+    $margin: 70px;
+    padding-bottom: $margin;
+    margin-bottom: -$margin;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180.02deg, #381E14 0.02%, rgba(34, 33, 33, 0) 101.61%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
     &-content {
-        padding-right: 46px;
+        padding-right: 10px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            width: 134px;
+            height: 123px;
+            background-image: url(../img/stars.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            right: 30px;
+            opacity: .30;
+        }
         & h3 {
             @include font-38;
             margin-bottom: 40px;
+            padding-right: 100px;
             @include md {
                 margin-bottom: 30px;
             }
@@ -124,6 +156,23 @@
         }
     }
     &-dates {
+        position: relative;
+        z-index: 1;
+        padding-left: 20px;
+        &::before {
+            --width: 100px;
+            content: "";
+            width: var(--width);
+            height: var(--width);
+            background-image: url(../img/star-blur.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            right: 40px;
+            bottom: 100px;
+            z-index: 0;
+            filter: blur(4px);
+        }
         & .left {
             width: calc(100% / 12 * 8);
             flex: 0 0 auto;
@@ -178,19 +227,34 @@
     &-header {
         @include flex;
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 15px 20px;
         background-color: rgba($color: #100F0E, $alpha: .60);
         background-blend-mode: multiply;
         text-align: center;
         & button {
-            display: none
+            --width: 30px;
+            width: var(--width);
+            height: var(--width);
+            flex: 0 0 auto;
+            border-radius: 100%;
+            @include flex;
+            justify-content: center;
+            color: $white;
+            border-radius: 100%;
+            padding: 0;
+            @include gradient;
+            border: none;
+            display: none;
+            &:hover {
+                @include gradientHover;
+            }
         }
         & .month {
             @include font-20;
             color: $white;
             font-weight: 700;
             width: 100%;
-            flex: 0 0 auto;
+            // flex: 0 0 auto;
         }
     }
     &-week {
@@ -206,6 +270,9 @@
             font-size: 16px;
             color: $white;
             padding: 17px 14px;
+            &:last-child {
+                border-right-width: 0;
+            }
             &.selected,
             &.today {
                 background: linear-gradient(103.67deg, #EAA954 0%, #D05438 98.2%);
@@ -220,6 +287,7 @@
             &:last-child {
                 & .day {
                     border-bottom: none;
+                    border-right-width: 1px;
                 }
             }
         }
@@ -228,3 +296,151 @@
 
 
 /* about end */
+
+
+/* invest start */
+
+.invest {
+    &-img {
+        padding-right: 50px;
+        position: relative;
+        z-index: 1;
+        &::before,
+        &::after {
+            content: "";
+            --width: 280px;
+            width: var(--width);
+            height: var(--width);
+            border-radius: 100%;
+            @include gradient;
+            opacity: .3;
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            transform: translateY(-50%);
+            filter: blur(165px);
+        }
+        &::after {
+            top: auto;
+            left: auto;
+            bottom: 40px;
+            right: 30px;
+            transform: translateY(0%)
+        }
+    }
+    &-content {
+        & h3 {
+            @include font-48;
+            margin-bottom: 30px;
+            @include sm {
+                margin-bottom: 20px;
+            }
+        }
+        & p {
+            font-size: 18px;
+            line-height: calc(27px/18px);
+            color: rgba($color: $white, $alpha: .65);
+            @include sm {
+                font-size: 16px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+        & .site-btn {
+            margin-top: 40px;
+            min-width: 174px;
+        }
+    }
+}
+
+
+/* invest end */
+
+
+/* program start */
+
+.program {
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: "";
+        width: 258px;
+        height: 223px;
+        @include gradient;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: .3;
+        border-radius: 100%;
+        filter: blur(165px);
+    }
+    &-content {
+        & h3 {
+            @include font-34;
+            margin-bottom: 30px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        & ul {
+            & li {
+                position: relative;
+                z-index: 1;
+                padding-left: 38px;
+                margin-bottom: 20px;
+                &::before {
+                    content: "";
+                    $width: 18px;
+                    width: $width;
+                    height: $width;
+                    border-radius: 3px;
+                    @include gradient;
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                }
+                & h4 {
+                    @include font-20;
+                    margin-bottom: 15px;
+                    font-weight: 500;
+                }
+                & p {
+                    color: rgba($color: $white, $alpha: .80);
+                }
+            }
+        }
+    }
+    &-img {
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            width: 729px;
+            height: 174px;
+            border-radius: 100%;
+            @include gradient;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            filter: blur(300px);
+        }
+        &::after {
+            content: "";
+            width: 240px;
+            height: 222px;
+            border-radius: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            @include gradient;
+            margin-top: -70px;
+            filter: blur(200px);
+        }
+    }
+}
+
+
+/* program end */
