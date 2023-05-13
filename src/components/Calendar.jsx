@@ -1,0 +1,92 @@
+import React, { useState } from 'react';
+
+function CustomCalendar() {
+  const [month, setMonth] = useState(new Date().getMonth());
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  const weeksInMonth = (month, year) => {
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInWeek = 7;
+    const weeksInMonth = Math.ceil(
+      (daysInMonth + firstDay) / daysInWeek
+    );
+    return weeksInMonth;
+  };
+
+  const renderDays = () => {
+    const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const daysInWeek = 7;
+    const days = [];
+    for (let i = 0; i < weekDays.length; i++) {
+      days.push(
+        <div key={i} className="day">
+          {weekDays[i]}
+        </div>
+      );
+    }
+    return <div className="week">{days}</div>;
+  };
+
+  const renderCalendar = () => {
+    const weeks = [];
+    const weeksCount = weeksInMonth(month, year);
+    const daysInWeek = 7;
+    let day = 1;
+    for (let i = 0; i < weeksCount; i++) {
+      const days = [];
+      for (let j = 0; j < daysInWeek; j++) {
+        if (day > daysInMonth()) {
+          break;
+        }
+        days.push(
+          <div key={day} className="day">
+            {day}
+          </div>
+        );
+        day++;
+      }
+      weeks.push(<div key={i} className="week">{days}</div>);
+    }
+    return <div className="calendar">{weeks}</div>;
+  };
+
+  const daysInMonth = () => {
+    return new Date(year, month + 1, 0).getDate();
+  };
+
+  const handlePrev = () => {
+    if (month === 0) {
+      setYear(year - 1);
+      setMonth(11);
+    } else {
+      setMonth(month - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (month === 11) {
+      setYear(year + 1);
+      setMonth(0);
+    } else {
+      setMonth(month + 1);
+    }
+  };
+
+  return (
+    <div className="calendar-container">
+      <div className="header">
+        <button onClick={handlePrev}>&lt;</button>
+        <div className="month">{`${new Date(
+          year,
+          month
+        ).toLocaleString('default', { month: 'long' })} ${year}`}</div>
+        <button onClick={handleNext}>&gt;</button>
+      </div>
+      {renderDays()}
+      {renderCalendar()}
+    </div>
+  );
+}
+
+export default CustomCalendar;
