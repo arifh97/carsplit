@@ -6,8 +6,8 @@ import Invest from './components/Invest'
 import Program from './components/Program'
 import Community from './components/Community'
 import Footer from './components/Footer'
+import 'aos/dist/aos.css';
 function App() {
-  
   return (
     <>
       <Header />
