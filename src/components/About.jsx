@@ -36,14 +36,14 @@ export default function About(){
                                     </div>
                                     <div className="content">
                                         <h5>You get paid</h5>
-                                        <p><span>Imagine possessed a supercar and earning money from it ? that's the beauty of Carsplit. as an investor, you can lean back and watch your money grow</span> <a href="/#">Read more...</a></p>
+                                        <p><span>Imagine possessed a super car and earning money from it ? that's the beauty of Carsplit. as an investor, you can lean back and watch your money grow</span> <a href="/#">Read more...</a></p>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </Col>
                     <Col lg={6}>
-                        <div className="about-dates d-flex">
+                        <div className="about-dates d-flex flex-wrap">
                             <div className="left">
                                 <Calendar />
                             </div>

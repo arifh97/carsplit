@@ -7,12 +7,12 @@ export default function Invest(){
         <div className='invest pt-180'>
             <Container>
                 <Row className='align-items-center'>
-                    <Col md={6}>
+                    <Col lg={6} className='text-center'>
                         <div className="invest-img">
                             <img src={img} alt="" />
                         </div>
                     </Col>
-                    <Col md={6}>
+                    <Col lg={6}>
                         <div className="invest-content">
                             <h3>Buy, Sell And Gain</h3>
                             <p>Your shares on the Carsplit marketplace means you're not only gaining potential returns from the luxury supercars you've invested in, but you're also gaining the flexibility to adjust your portfolio as you see fit. </p>
