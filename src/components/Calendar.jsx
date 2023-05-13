@@ -25,13 +25,14 @@ function CustomCalendar() {
         </div>
       );
     }
-    return <div className="week">{days}</div>;
+    return <div className="calendar-week">{days}</div>;
   };
 
   const renderCalendar = () => {
     const weeks = [];
     const weeksCount = weeksInMonth(month, year);
-    const daysInWeek = 7;
+    const daysInWeek = 7;    
+    const today = new Date().getDate();
     let day = 1;
     for (let i = 0; i < weeksCount; i++) {
       const days = [];
@@ -40,15 +41,15 @@ function CustomCalendar() {
           break;
         }
         days.push(
-          <div key={day} className="day">
+          <div key={day} className= {day === today ? 'day today' : 'day'}>
             {day}
           </div>
         );
         day++;
       }
-      weeks.push(<div key={i} className="week">{days}</div>);
+      weeks.push(<div key={i} className="calendar-week">{days}</div>);
     }
-    return <div className="calendar">{weeks}</div>;
+    return <div className="calendar-wrap">{weeks}</div>;
   };
 
   const daysInMonth = () => {
@@ -75,7 +76,7 @@ function CustomCalendar() {
 
   return (
     <div className="calendar-container">
-      <div className="header">
+      <div className="calendar-header">
         <button onClick={handlePrev}>&lt;</button>
         <div className="month">{`${new Date(
           year,

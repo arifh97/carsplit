@@ -76,3 +76,73 @@ input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
+
+.pt {
+    &-130 {
+        padding-top: 130px;
+        @include lg {
+            padding-top: 100px;
+        }
+        @include md {
+            padding-top: 70px;
+        }
+        @include sm {
+            padding-top: 50px;
+        }
+    }
+    &-180 {
+        padding-top: 180px;
+        @include lg {
+            padding-top: 150px;
+        }
+        @include md {
+            padding-top: 120px;
+        }
+        @include sm {
+            padding-top: 80px;
+        }
+    }
+}
+
+// site btn
+.site-btn {
+    --px: 26px;
+    --py: 15px;
+    display: inline-block;
+    @include gradient;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $white !important;
+    border-radius: 5px;
+    padding: var(--py) var(--px);
+    text-align: center;
+    &:hover {
+        @include gradientHover;
+    }
+}
+
+.social {
+    &-link {
+        & li {
+            display: block;
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            & a {
+                display: block;
+                --width: 40px;
+                width: var(--width);
+                height: var(--width);
+                border-radius: 4px;
+                color: rgba($color: $white, $alpha: .50);
+                background-color: #392514;
+                @include flex;
+                justify-content: center;
+                &:hover {
+                    @include gradient;
+                }
+            }
+        }
+    }
+}

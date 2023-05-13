@@ -7,7 +7,7 @@ export default function Banner(){
         <div className="banner">
             <Container>
                 <Row className="align-items-end">
-                    <Col lg={5}>
+                    <Col lg={6} className="position-relative text-end">
                         <ul className="social-link">
                             <li>
                                 <a href="/#">
@@ -42,7 +42,7 @@ export default function Banner(){
                             <img src={img} alt="" />
                         </div>
                     </Col>
-                    <Col lg={7}>
+                    <Col lg={6}>
                         <div className="banner-content">
                             <h1>Welcome to the fastest Journey of your life</h1>
                             <p>Take advantage of the growing demand for luxury car rentals and earn passive income through a secure and hassle-free investment</p>

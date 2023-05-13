@@ -1,5 +1,6 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import img from '../assets/img/invest-img.png'
 
 export default function Invest(){
     return(
@@ -8,7 +9,7 @@ export default function Invest(){
                 <Row>
                     <Col md={6}>
                         <div className="invest-img">
-                            <img src="" alt="" />
+                            <img src={img} alt="" />
                         </div>
                     </Col>
                     <Col md={6}>

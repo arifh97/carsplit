@@ -1,5 +1,6 @@
 import {React} from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import img from '../assets/img/program-img.png'
 
 export default function Program(){
     return(
@@ -7,7 +8,7 @@ export default function Program(){
             <Container>
                 <Row className='justify-content-between'>
                     <Col lg={8}>
-                        <div className="section-title">
+                        <div className="section-title text-center">
                             <h2>Ambassador Program</h2>
                             <p> CarSplit ambassador, will have the opportunity to join a community of like-minded individuals who are passionate about investing and luxury cars.</p>
                         </div>
@@ -38,7 +39,9 @@ export default function Program(){
                         </div>
                     </Col>
                     <Col lg={7}>
-                        <div className="program-img"></div>
+                        <div className="program-img">
+                            <img src={img} alt="" />
+                        </div>
                     </Col>
                     <Col sm={12} className='text-center'>
                         <a href="/#" className="site-btn">Become an Ambassador</a>

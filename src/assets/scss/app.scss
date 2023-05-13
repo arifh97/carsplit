@@ -2,7 +2,229 @@
 @import '../scss/mixins';
 @import '../scss/media_quers';
 @import '../scss/base';
-// HEADER
-@import '../scss/header';
-// FOOTER
-@import '../scss/footer';
+
+/* header start */
+
+.heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 8;
+    padding: 30px 0;
+    & .site-btn {
+        --py: 12px;
+    }
+}
+
+
+/* header end */
+
+
+/* banner start */
+
+.banner {
+    & .social-link {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+    }
+    &-img {
+        width: 430px;
+        margin-left: auto;
+        margin-right: 30px;
+        padding-bottom: 104%;
+        @include img(cover);
+    }
+    &-content {
+        padding-bottom: 140px;
+        @include lg {
+            padding-bottom: 100px;
+        }
+        @include md {
+            padding-bottom: 80px;
+        }
+        @include sm {
+            padding-bottom: 0;
+        }
+        & h1 {
+            @include font-52;
+            @include gradientText;
+            margin-bottom: 20px;
+        }
+        & p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            color: rgba($color: $white, $alpha: .65);
+            @include md {
+                margin-bottom: 26px;
+            }
+            @include sm {
+                margin-bottom: 20px;
+            }
+        }
+        & a {
+            min-width: 190px;
+        }
+    }
+}
+
+
+/* banner end */
+
+
+/* about stat */
+
+.about {
+    &-content {
+        padding-right: 46px;
+        & h3 {
+            @include font-38;
+            margin-bottom: 40px;
+            @include md {
+                margin-bottom: 30px;
+            }
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        & ul {
+            & li {
+                --icon: 28px;
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+                & .icon {
+                    width: var(--icon);
+                    flex: 0 0 auto;
+                    padding-top: 3px;
+                }
+                & .content {
+                    width: calc(100% - var(--icon));
+                    flex: 0 0 auto;
+                    padding-left: 15px;
+                    & h5 {
+                        @include font-25;
+                        font-weight: 500;
+                        margin-bottom: 20px;
+                    }
+                    & p {
+                        & span {
+                            color: rgba($color: $white, $alpha: .70);
+                        }
+                        & a {
+                            @include gradientText;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-dates {
+        & .left {
+            width: calc(100% / 12 * 8);
+            flex: 0 0 auto;
+        }
+        & .right {
+            width: calc(100%/ 12 * 4);
+            flex: 0 0 auto;
+            padding: 20px;
+            background-color: rgba($color: #4C2B1F, $alpha: .80);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid transparent;
+            border-image: linear-gradient(35deg, $primary 0%, $secondary 98.2%) 20% round;
+            border-left: none;
+        }
+        &-card {
+            &:not(:last-child) {
+                margin-bottom: 34px;
+            }
+            padding: 0 6px;
+            & strong {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
+            & span {
+                @include font-25;
+                font-weight: 600;
+                color: $white;
+            }
+        }
+        & .site-btn {
+            --py: 11px;
+        }
+    }
+}
+
+.calendar {
+    &-container {
+        width: 100%;
+        border: 1px solid transparent;
+        border-image: linear-gradient(35deg, $primary 0%, $secondary 98.2%) 20% round;
+        background-color: #4D2B1F;
+        &>.calendar {
+            &-week {
+                & .day {
+                    background-color: #885418;
+                }
+            }
+        }
+    }
+    &-header {
+        @include flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: rgba($color: #100F0E, $alpha: .60);
+        background-blend-mode: multiply;
+        text-align: center;
+        & button {
+            display: none
+        }
+        & .month {
+            @include font-20;
+            color: $white;
+            font-weight: 700;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+    }
+    &-week {
+        @include flex;
+        & .day {
+            width: calc(100% / 7);
+            flex: 0 0 auto;
+            text-align: center;
+            border: 1.5px solid transparent;
+            border-image: linear-gradient(35deg, $primary 0%, $secondary 98.2%) 20% round;
+            border-top: none;
+            border-left: none;
+            font-size: 16px;
+            color: $white;
+            padding: 17px 14px;
+            &.selected,
+            &.today {
+                background: linear-gradient(103.67deg, #EAA954 0%, #D05438 98.2%);
+            }
+        }
+    }
+    &-wrap {
+        & .calendar-week {
+            & .day {
+                font-weight: 700;
+            }
+            &:last-child {
+                & .day {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* about end */
