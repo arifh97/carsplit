@@ -680,7 +680,7 @@
 
 /* Popup  Start*/
 .congratulations{
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 40px;
     & .section-title{
         & h2{
@@ -770,6 +770,9 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
+    @include sm{
+        margin-top: 30px;
+    }
 }
 
 .contact-email p, .contact-email a {
@@ -796,6 +799,21 @@
     background: linear-gradient(180.02deg, #3D261E 0.02%, rgba(34, 33, 33, 0) 101.61%);
     z-index: -1;
 }
+.modal-header{
+    border: 0;
+    & .btn-close {
+        opacity: 1;
+        background-color: #fff;
+        right: 30px;
+        margin-right: 20px !important;
+        margin-top: 5px !important;
+        transition: all .3s ease-in-out;
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
+
 /* Popup  End*/
 /* footer start */
 

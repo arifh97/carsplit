@@ -166,13 +166,13 @@ const handleShow = () => setShow(true);
                     </Col>
                 </Row>
                 
-                <Row>
-                    <Col lg={6}>
+                <Row className="align-items-center">
+                    <Col sm={6}>
                         <div className="help">
                         <a href="https://t.me/CarsplitSupport"> <img src={help} alt="" /> help</a>
                         </div>
                     </Col>
-                    <Col lg={6}>
+                    <Col sm={6}>
                         <div className="contact-email">
                         <p>Support: <a href="mailto:contact@carsplit.io">contact@carsplit.io</a></p> 
                         </div>
