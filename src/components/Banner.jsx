@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import img from '../assets/img/banner-img.jpg';
 import starOne from '../assets/img/Star-one.png';
 import starTwo from '../assets/img/star-two.png';
 import AOS from 'aos';
 export default function Banner(){
+    const [modalShow, setModalShow] = React.useState(false);
     useEffect(()=>{
         AOS.init({duration: 2000})
     }, []);
