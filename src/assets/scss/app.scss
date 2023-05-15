@@ -120,6 +120,51 @@
         & a {
             min-width: 190px;
         }
+        & .starone{
+            position: absolute;
+            right: 30px;
+            top: -50px;
+            @include mmd{
+                bottom: 0;
+            }
+            animation: infinite-spinning 7s infinite linear;
+            @keyframes infinite-spinning {
+     
+                from {
+                  transform: rotate(0deg);
+                }
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+        }
+        & .startwo{
+            position: absolute;
+            right: 0;
+            bottom: 140px;
+            @include mmd{
+                bottom: 0;
+            }
+            animation: fancy-spin 2000ms;
+            animation-iteration-count: infinite;
+            @keyframes fancy-spin {
+                0% {
+                  transform: scale(1);
+                }
+                25% {
+                  transform: scale(1);
+                }
+                50% {
+                  transform:scale(1.3);
+                }
+                75% {
+                  transform: scale(1.3);
+                }
+                100% {
+                  transform:scale(1);
+                }
+              }
+        }
        
     }
 }
@@ -598,8 +643,8 @@
             & a {
                 $border: 1px;
                 display: block;
-                border: $border solid transparent;
-                border-image: linear-gradient(35deg, #EAA954 0%, #D05438 98.2%) 20% round;
+                border: 1px solid #EAA954;
+                border-radius: 10px;
                 color: $white;
                 padding: 10px 20px;
                 position: relative;
