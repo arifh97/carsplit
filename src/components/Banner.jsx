@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import img from '../assets/img/banner-img.jpg';
+import starOne from '../assets/img/Star-one.png';
+import starTwo from '../assets/img/star-two.png';
 import AOS from 'aos';
 export default function Banner(){
     useEffect(()=>{
@@ -9,8 +11,8 @@ export default function Banner(){
     return(
         <div className="banner">
             <Container>
-                <Row className="align-items-end">
-                    <Col lg={6} className="position-relative text-end">
+                <Row>
+                    <Col lg={5} className="position-relative">
                         <ul className="social-link">
                             <li>
                                 <a href="https://t.me/+v-R5gf9yYTQ5ZDdk" target="_blank" rel="noreferrer"  data-aos="fade-up" data-aos-duration="1000">
@@ -41,15 +43,17 @@ export default function Banner(){
                                 </a>
                             </li>
                         </ul>
-                        <div className="banner-img">
+                        {/* <div className="banner-img">
                             <img src={img} alt="" data-aos="fade-in"/>
-                        </div>
+                        </div> */}
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={7}>
                         <div className="banner-content">
+                            <img src={starOne} alt="" />
                             <h1  data-aos="fade-up" data-aos-duration="1000">Welcome to the fastest Journey of your life</h1>
                             <p  data-aos="fade-up" data-aos-duration="1300">Take advantage of the growing demand for luxury car rentals and earn passive income through a secure and hassle-free investment</p>
                             <a href="/#" className="site-btn"  data-aos="fade-up" data-aos-duration="1600">Acquire now</a>
+                            <img src={starTwo} alt="" />
                         </div>
                     </Col>
                 </Row>

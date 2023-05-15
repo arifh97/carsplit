@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from 'react-bootstrap'
 import checkbox from '../assets/img/checkbox.svg'
+import calenderBg from '../assets/img/calender-bg.svg'
 import Calendar from './Calendar'
 import AOS from 'aos';
 
@@ -48,7 +49,7 @@ export default function About(){
                     </Col>
                     <Col lg={6}>
                         <div className="about-dates d-flex flex-wrap"  data-aos="fade-right" data-aos-duration="1800">
-                            <div className="left">
+                            {/* <div className="left">
                                 <Calendar />
                             </div>
                             <div className="right">
@@ -61,7 +62,8 @@ export default function About(){
                                     <span>$7800</span>
                                 </div>
                                 <a href="/#" className="site-btn mt-auto">Claim</a>
-                            </div>
+                            </div> */}
+                            <img src={calenderBg} alt="" />
                         </div>
                     </Col>
                 </Row>
