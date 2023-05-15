@@ -673,6 +673,110 @@
 /* community end */
 
 
+
+
+
+
+
+/* Popup  Start*/
+.congratulations{
+    padding-bottom: 40px;
+    & .section-title{
+        & h2{
+            @include gradientText;
+        }
+    }
+    & .bank-card-box-item{
+        background: linear-gradient(103.67deg, rgba(234, 169, 84, 0.1) 0%, rgba(208, 84, 56, 0.1) 98.2%);
+        border-radius: 10px;
+        border: 2px solid #EAA954;
+        & .bank-card-header{
+            border-bottom: 2px solid #EAA954;
+            padding:20px 30px;
+            & h4{
+                margin-bottom: 0;
+                font-family: 'Inter';
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 150%;
+            }
+        }
+        & .bank-card-body{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 30px;
+        }
+        &.two{
+            background: #0D0D0D;
+        }
+    }
+    & .payment-docs{
+        padding-top: 60px;
+        padding-bottom: 100px;
+        padding-right: 10%;
+        & li{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: #FFFFFF;
+            opacity: 0.8;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            padding-left: 30px;
+            &::before{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 5px;
+                width: 17px;
+                height: 17px;
+                background: linear-gradient(103.67deg, #EAA954 0%, #D05438 98.2%);
+                border-radius: 50%;
+            }
+        }
+    }
+   
+}
+.help a {
+    display: inline-block;
+    background: linear-gradient(103.67deg, rgba(234, 169, 84, 0.4) 0%, rgba(208, 84, 56, 0.4) 98.2%);
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+/* identical to box height, or 27px */
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.help a img {
+    margin-right: 6px;
+}
+
+.help a:hover {
+    opacity: .5;
+}
+
+.contact-email {
+    text-align: right;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.contact-email p, .contact-email a {
+    color: #FFF;
+}
+
+.contact-email a:hover {
+    opacity: .5;
+}
+/* Popup  End*/
 /* footer start */
 
 .footer {
