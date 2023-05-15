@@ -6,8 +6,8 @@ import Invest from './components/Invest'
 import Program from './components/Program'
 import Community from './components/Community'
 import Footer from './components/Footer'
-import Congratulations from './components/Congratulations'
 import 'aos/dist/aos.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
@@ -17,7 +17,6 @@ function App() {
       <Invest />
       <Program />
       <Community />
-      <Congratulations />
       <Footer />
     </>
   )
