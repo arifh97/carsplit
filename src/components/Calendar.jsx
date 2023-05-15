@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 function CustomCalendar() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [month, setMonth] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
 
@@ -75,7 +79,12 @@ function CustomCalendar() {
   };
 
   return (
-    <div className="calendar-container">
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+      <div className="calendar-container">
+      
       <div className="calendar-header">
         <button onClick={handlePrev}>&lt;</button>
         <div className="month">{`${new Date(
@@ -87,6 +96,22 @@ function CustomCalendar() {
       {renderDays()}
       {renderCalendar()}
     </div>
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+   
   );
 }
 

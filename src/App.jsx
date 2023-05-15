@@ -7,7 +7,6 @@ import Program from './components/Program'
 import Community from './components/Community'
 import Footer from './components/Footer'
 import 'aos/dist/aos.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <>
