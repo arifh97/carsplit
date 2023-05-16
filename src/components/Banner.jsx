@@ -4,7 +4,6 @@ import starOne from '../assets/img/Star-one.png';
 import starTwo from '../assets/img/star-two.png';
 import Modal from 'react-bootstrap/Modal';
 import AOS from 'aos';
-
 import visaCardImg from '../assets/img/visa.png'
 import debitCartStar from '../assets/img/debit-card-stars.png'
 import cryptocurrencyImg from '../assets/img/cryptocurrency-deposit.png'

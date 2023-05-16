@@ -685,6 +685,9 @@
 .congratulations{
     padding-top: 40px;
     padding-bottom: 40px;
+    @include sm{
+        padding-top: 0;
+    }
     & .section-title{
         & h2{
             @include gradientText;
@@ -763,6 +766,16 @@
 .help a img {
     margin-right: 6px;
 }
+.help{
+   @include sm{
+    text-align: center;
+   }
+}
+.contact-email p{
+    @include sm{
+     text-align: center;
+    }
+ }
 
 .help a:hover {
     opacity: .5;
@@ -836,11 +849,14 @@
             margin: auto;
         }
     }
-    & a {
+    & Button {
         font-size: 14px;
         color: $white;
+        background: transparent;
+        border: 0;
         &:hover {
             color: $primary;
+            background: transparent;
         }
     }
     & p {
@@ -857,6 +873,8 @@
         }
     }
 }
-
+.trams-condition-content li{
+    margin-bottom: 10px;
+}
 
 /* footer end */
