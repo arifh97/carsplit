@@ -8,7 +8,7 @@ const ReadMoreReadLess = ({shortContent, longContent}) => {
             <span className={`long-text ${collapse ? "expanded" : ""}`}>
             {longContent}
             </span> 
-            <a onClick={() => setCollapse((prev) => !prev)}>Read More</a>
+            <a onClick={() => setCollapse((prev) => !prev)}> Read More</a>
         </div>
     )
 }
