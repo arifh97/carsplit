@@ -1,8 +1,24 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import Logo from '../assets/img/logo.png'
-
+import CarsplitWhitePaper from '../assets/pdf-files/CARSPLIT-WHITEPAPER.pdf';
 export default function Header(){
+    const CarsplitWhitePaperButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('TUTOUSDT.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = CarsplitWhitePaper;
+                alink.download = 'CarsplitWhitePaper.pdf';
+                alink.click();
+            })
+        })
+    }
+
     return(
         <header className="heading">
             <Container>
@@ -13,7 +29,7 @@ export default function Header(){
                         </a>
                     </Col>
                     <Col className='text-end'>
-                        <a href="/#" className="site-btn">White Paper</a>
+                        <Button className="site-btn" onClick={CarsplitWhitePaperButtonClick}>White Paper</Button>
                     </Col>
                 </Row>
             </Container>

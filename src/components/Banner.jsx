@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import starOne from '../assets/img/Star-one.png';
 import starTwo from '../assets/img/star-two.png';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import AOS from 'aos';
 
@@ -182,7 +181,7 @@ const handleShow = () => setShow(true);
         </Container>
         </div>
         </Modal.Body>
-      </Modal>
+        </Modal>
         </>
     )
 }
