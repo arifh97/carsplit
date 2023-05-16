@@ -4,12 +4,11 @@ import checkbox from '../assets/img/checkbox.svg'
 import calenderBg from '../assets/img/calender-bg.svg'
 import Calendar from './Calendar';
 import AOS from 'aos';
-
+import ReadMoreReadLess from "./ReadMoreReadLess";
 export default function About(){
     useEffect(()=>{
         AOS.init({duration: 2000})
     }, []);
-    const [collapse, setCollapse] = useState(false);
     return(
         <div className='about pt-130'>
             <Container>
@@ -25,10 +24,9 @@ export default function About(){
                                     <div className="content">
                                         <h5>Invest</h5>
                                         <p>
-                                            Investing in Carsplit allows you to own a PART of a supercar, which we then rent out to customers. As an investor, you receive a AMOUNT of the profits from the rental income <span className={`long-text ${collapse ? "expanded" : ""}`}>
-                                            providing a unique opportunity to earn passive income from luxury vehicles AND BE A SUPERCARS OWNER 
-                                            </span> 
-                                            <a onClick={() => setCollapse((prev1) => !prev1)}>Read More</a>
+                                            <ReadMoreReadLess shortContent="Investing in Carsplit allows you to own a PART of a supercar, which we then rent out to customers. As an investor, you receive a AMOUNT of the profits from the rental income" 
+                                            longContent="providing a unique opportunity to earn passive income from luxury vehicles AND BE A SUPERCARS OWNER "
+                                            />
                                         </p>
                                         
                                     </div>
@@ -40,10 +38,9 @@ export default function About(){
                                     <div className="content">
                                         <h5>We rent</h5>
                                         <p>
-                                            With Carsplit, you don't have to worry about the hassle of renting out your supercar investment. We take care of everything from 0 to hundred, including marketing the vehicle <span className={`long-text ${collapse ? "expanded" : ""}`}>
-                                            finding qualified renters, managing the rental process, and ensuring that you get YOUR INCOME. Our team of experts handles all the logistics so that you can LEAN back, relax, and enjoy the benefits of your investment without any of the stress or hassle. With Carsplit, investing in a supercar AND BE AN OWNER has never been easier or more profitable.
-                                            </span> 
-                                            <a onClick={() => setCollapse((prev) => !prev)}>Read More</a>
+                                            <ReadMoreReadLess shortContent=" With Carsplit, you don't have to worry about the hassle of renting out your supercar investment. We take care of everything from 0 to hundred, including marketing the vehicle" 
+                                            longContent="finding qualified renters, managing the rental process, and ensuring that you get YOUR INCOME. Our team of experts handles all the logistics so that you can LEAN back, relax, and enjoy the benefits of your investment without any of the stress or hassle. With Carsplit, investing in a supercar AND BE AN OWNER has never been easier or more profitable."
+                                            />
                                         </p>
                                     </div>
                                 </li>
@@ -53,10 +50,9 @@ export default function About(){
                                     </div>
                                     <div className="content">
                                         <p>
-                                            Imagine POSSESSED A SUPERCAR AND earning money FROM IT ? That's the beauty of Carsplit. As an investor, you can LEAN back and watch your money grow <span className={`long-text ${collapse ? "expanded" : ""}`}>
-                                            while we handle all the details of renting out the car and ensuring a seamless experience for customers.
-                                            </span> 
-                                            <a onClick={() => setCollapse((prev) => !prev)}>Read More</a>
+                                            <ReadMoreReadLess shortContent="Imagine POSSESSED A SUPERCAR AND earning money FROM IT ? That's the beauty of Carsplit. As an investor, you can LEAN back and watch your money grow" 
+                                            longContent="while we handle all the details of renting out the car and ensuring a seamless experience for customers."
+                                            />
                                         </p>
                                     </div>
                                 </li>
